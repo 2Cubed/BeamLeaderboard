@@ -28,7 +28,7 @@
 
   <md-list ng-init="getChannels()">
     <md-list-item ng-repeat="channel in channels track by $index">
-      <img alt="{{ channel.token }}" src="{{ channel.user.avatarUrl || 'https://beam.pro/_latest/img/app/avatars/default.jpg' }}" class="md-avatar" />
+      <img alt="{{ channel.token }}" ng-src="{{ channel.user.avatarUrl || 'https://beam.pro/_latest/img/app/avatars/default.jpg' }}" class="md-avatar" />
       <p class="md-list-item-text">{{ $index + 1 }}. {{ channel.token }}</p>
     </md-list-item>
   </md-list>
